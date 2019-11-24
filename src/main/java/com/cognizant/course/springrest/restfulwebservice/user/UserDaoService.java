@@ -35,14 +35,28 @@ public class UserDaoService {
 	}
 
 	public User findOne(int id) {
-		
+
 		Optional<User> userFound = users.stream().filter(user -> user.getId() == id).findAny();
-		
+
 		User resultUser = null;
-		
+
 		if (userFound.isPresent())
 			resultUser = userFound.get();
-			
+
+		return resultUser;
+	}
+
+	public User deleteById(int id) {
+
+		Optional<User> userFound = users.stream().filter(user -> user.getId() == id).findAny();
+	 
+		User resultUser = null;
+
+		if (userFound.isPresent()) {
+			resultUser = userFound.get();
+			users.removeIf(user -> user.getId() == id);
+		}
+
 		return resultUser;
 	}
 
