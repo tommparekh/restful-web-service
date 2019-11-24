@@ -37,6 +37,8 @@ public class UserResourceController {
 	public void createdUser(@RequestBody User user) {
 		System.out.println(String.format("###### User: %s", user.toString()));
 		service.save(user);
+		
+		
 	}
 	
 }
