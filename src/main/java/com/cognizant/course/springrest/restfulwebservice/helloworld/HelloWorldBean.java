@@ -1,4 +1,4 @@
-package com.cognizant.course.springrest.restfulwebservice;
+package com.cognizant.course.springrest.restfulwebservice.helloworld;
 
 public class HelloWorldBean {
 	private String name;

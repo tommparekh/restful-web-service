@@ -1,4 +1,4 @@
-package com.cognizant.course.springrest.restfulwebservice;
+package com.cognizant.course.springrest.restfulwebservice.helloworld;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
