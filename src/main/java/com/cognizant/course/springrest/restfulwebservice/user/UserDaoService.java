@@ -3,6 +3,7 @@ package com.cognizant.course.springrest.restfulwebservice.user;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Component;
 
@@ -34,10 +35,14 @@ public class UserDaoService {
 	}
 
 	public User findOne(int id) {
-		users.forEach(System.out::println);
-
-		User resultUser = users.stream().filter(u -> u.getId() == id).findAny().orElse(null);
-
+		
+		Optional<User> userFound = users.stream().filter(user -> user.getId() == id).findAny();
+		
+		User resultUser = null;
+		
+		if (userFound.isPresent())
+			resultUser = userFound.get();
+			
 		return resultUser;
 	}
 

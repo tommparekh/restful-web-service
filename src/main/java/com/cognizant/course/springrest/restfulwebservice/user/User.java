@@ -34,9 +34,15 @@ public class User {
 
 	@Override
 	public String toString() {
+		/*
+		 * return "User [name=" + name + ", id=" + id + ", birthDate=" + birthDate +
+		 * ", getName()=" + getName() + ", getId()=" + getId() + ", getBirthDate()=" +
+		 * getBirthDate() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+		 * + ", toString()=" + super.toString() + "]";
+		 */
+		
 		return "User [name=" + name + ", id=" + id + ", birthDate=" + birthDate + ", getName()=" + getName()
-				+ ", getId()=" + getId() + ", getBirthDate()=" + getBirthDate() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		+ ", getId()=" + getId() + ", getBirthDate()=" + getBirthDate() + "]";
 	}
 
 	protected User() {
