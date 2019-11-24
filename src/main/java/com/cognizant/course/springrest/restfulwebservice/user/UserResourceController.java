@@ -3,6 +3,8 @@ package com.cognizant.course.springrest.restfulwebservice.user;
 import java.net.URI;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -45,7 +47,7 @@ public class UserResourceController {
 	// output - CREATED status and created URI
 
 	@PostMapping("/users")
-	public ResponseEntity<Object> createdUser(@RequestBody User user) {
+	public ResponseEntity<Object> createdUser(@Valid @RequestBody User user) {
 		// System.out.println(String.format("###### User: %s", user.toString()));
 		User savedUser = service.save(user);
 

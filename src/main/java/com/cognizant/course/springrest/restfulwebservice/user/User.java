@@ -2,10 +2,17 @@ package com.cognizant.course.springrest.restfulwebservice.user;
 
 import java.util.Date;
 
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
+
 public class User {
 
+	@Size(min = 2, message = "Name MUST have atleast 2 chars.")
 	private String name;
+	
 	private Integer id;
+	
+	@Past (message = "Birthdate MUST be the past date.")
 	private Date birthDate;
 
 	public String getName() {
